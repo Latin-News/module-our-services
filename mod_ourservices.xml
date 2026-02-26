@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail></authorEmail>
     <authorUrl></authorUrl>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <description>MOD_OURSERVICES_XML_DESCRIPTION</description>
 
     <namespace path="src">Joomla\Module\Ourservices</namespace>
@@ -28,6 +28,14 @@
         <fields name="params">
             <fieldset name="basic" addfieldprefix="Joomla\Component\Menus\Administrator\Field">
                 <field
+                    name="image"
+                    type="media"
+                    label="MOD_OURSERVICES_FIELD_IMAGE_LABEL"
+                    description="MOD_OURSERVICES_FIELD_IMAGE_DESC"
+                    directory="images"
+                />
+
+                <field
                     name="services"
                     type="subform"
                     label="MOD_OURSERVICES_FIELD_SERVICES_LABEL"
@@ -37,13 +45,6 @@
                     max="12"
                 >
                     <form>
-                        <field
-                            name="image"
-                            type="media"
-                            label="MOD_OURSERVICES_FIELD_IMAGE_LABEL"
-                            description="MOD_OURSERVICES_FIELD_IMAGE_DESC"
-                            directory="images"
-                        />
                         <field
                             name="title"
                             type="text"
