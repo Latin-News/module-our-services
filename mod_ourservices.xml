@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_OURSERVICES</name>
+    <author>Russell English</author>
+    <creationDate>26 February 2026</creationDate>
+    <copyright>Copyright (C) 2026 Russell English. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail></authorEmail>
+    <authorUrl></authorUrl>
+    <version>1.0.0</version>
+    <description>MOD_OURSERVICES_XML_DESCRIPTION</description>
+
+    <namespace path="src">Joomla\Module\Ourservices</namespace>
+
+    <files>
+        <filename module="mod_ourservices">mod_ourservices.php</filename>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <media destination="mod_ourservices" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldprefix="Joomla\Component\Menus\Administrator\Field">
+                <field
+                    name="services"
+                    type="subform"
+                    label="MOD_OURSERVICES_FIELD_SERVICES_LABEL"
+                    description="MOD_OURSERVICES_FIELD_SERVICES_DESC"
+                    multiple="true"
+                    min="1"
+                    max="12"
+                >
+                    <form>
+                        <field
+                            name="image"
+                            type="media"
+                            label="MOD_OURSERVICES_FIELD_IMAGE_LABEL"
+                            description="MOD_OURSERVICES_FIELD_IMAGE_DESC"
+                            directory="images"
+                        />
+                        <field
+                            name="title"
+                            type="text"
+                            label="MOD_OURSERVICES_FIELD_TITLE_LABEL"
+                            description="MOD_OURSERVICES_FIELD_TITLE_DESC"
+                            required="true"
+                            filter="string"
+                        />
+                        <field
+                            name="description"
+                            type="textarea"
+                            label="MOD_OURSERVICES_FIELD_DESCRIPTION_LABEL"
+                            description="MOD_OURSERVICES_FIELD_DESCRIPTION_DESC"
+                            rows="5"
+                            cols="30"
+                            filter="raw"
+                        />
+                        <field
+                            name="menuitem"
+                            type="menuitem"
+                            label="MOD_OURSERVICES_FIELD_MENUITEM_LABEL"
+                            description="MOD_OURSERVICES_FIELD_MENUITEM_DESC"
+                        />
+                    </form>
+                </field>
+
+                <field
+                    name="columns"
+                    type="list"
+                    label="MOD_OURSERVICES_FIELD_COLUMNS_LABEL"
+                    description="MOD_OURSERVICES_FIELD_COLUMNS_DESC"
+                    default="3"
+                >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                </field>
+
+                <field
+                    name="grid_gap"
+                    type="list"
+                    label="MOD_OURSERVICES_FIELD_GRID_GAP_LABEL"
+                    description="MOD_OURSERVICES_FIELD_GRID_GAP_DESC"
+                    default="medium"
+                >
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </field>
+
+                <field
+                    name="module_class_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULE_CLASS_SUFFIX_LABEL"
+                    description="COM_MODULES_FIELD_MODULE_CLASS_SUFFIX_DESC"
+                />
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                    rows="3"
+                />
+
+                <field
+                    name="cache"
+                    type="list"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC"
+                    default="1"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="number"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                    default="900"
+                />
+
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static"
+                >
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Our Services Module Updates">
+            https://raw.githubusercontent.com/Latin-News/module-our-services/main/updates.xml
+        </server>
+    </updateservers>
+</extension>
