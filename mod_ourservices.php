@@ -14,12 +14,14 @@ use Joomla\Module\Ourservices\Site\Helper\OurservicesHelper;
 
 // Get module parameters
 $services = $params->get('services', []);
+$image = $params->get('image', '');
 $columns = $params->get('columns', 3);
 $gridGap = $params->get('grid_gap', 'medium');
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_COMPAT, 'UTF-8');
 
-// Process services data
+// Process services data and image
 $processedServices = OurservicesHelper::getServices($services);
+$processedImage = OurservicesHelper::processImage($image);
 
 // Require the template
 require ModuleHelper::getLayoutPath('mod_ourservices', $params->get('layout', 'default'));

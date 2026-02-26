@@ -52,13 +52,6 @@ class OurservicesHelper
             $item->title = $service->title;
             $item->description = $service->description ?? '';
 
-            // Process image
-            if (!empty($service->image)) {
-                $item->image = self::processImage($service->image);
-            } else {
-                $item->image = '';
-            }
-
             // Process menu item link
             if (!empty($service->menuitem)) {
                 $item->link = self::getMenuItemLink($service->menuitem);
@@ -81,7 +74,7 @@ class OurservicesHelper
      *
      * @since   1.0.0
      */
-    protected static function processImage($imagePath)
+    public static function processImage($imagePath)
     {
         if (empty($imagePath)) {
             return '';
