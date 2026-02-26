@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail></authorEmail>
     <authorUrl></authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>MOD_OURSERVICES_XML_DESCRIPTION</description>
 
     <namespace path="src">Joomla\Module\Ourservices</namespace>
