@@ -22,7 +22,7 @@ $gapClass = 'uk-grid-' . $gridGap;
 <div class="mod-ourservices<?php echo $moduleclass_sfx; ?>">
     <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-1 <?php echo $gapClass; ?>" uk-grid>
         <?php if (!empty($processedImage)) : ?>
-            <div class="uk-flex-first uk-flex-last@s">
+            <div class="uk-flex-first">
                 <div class="uk-cover-container uk-height-large">
                     <img src="<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>"
                          alt="<?php echo Text::_('MOD_OURSERVICES_SERVICES_IMAGE'); ?>"
