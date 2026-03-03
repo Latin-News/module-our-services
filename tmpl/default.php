@@ -20,6 +20,12 @@ $gapClass = 'uk-grid-' . $gridGap;
 ?>
 
 <div class="mod-ourservices<?php echo $moduleclass_sfx; ?>">
+    <?php if ($module->showtitle) : ?>
+        <<?php echo $headerTag; ?><?php echo $headerClass ? ' class="' . $headerClass . '"' : ''; ?>>
+            <?php echo $module->title; ?>
+        </<?php echo $headerTag; ?>>
+    <?php endif; ?>
+
     <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-1 <?php echo $gapClass; ?>" uk-grid>
         <?php if (!empty($processedImage)) : ?>
             <div class="uk-flex-first">

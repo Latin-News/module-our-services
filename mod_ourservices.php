@@ -17,6 +17,8 @@ $services = $params->get('services', []);
 $image = $params->get('image', '');
 $columns = $params->get('columns', 3);
 $gridGap = $params->get('grid_gap', 'medium');
+$headerTag = $params->get('header_tag', 'h3');
+$headerClass = htmlspecialchars($params->get('header_class', ''), ENT_COMPAT, 'UTF-8');
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_COMPAT, 'UTF-8');
 
 // Process services data and image
