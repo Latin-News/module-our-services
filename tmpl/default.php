@@ -22,7 +22,7 @@ $gapClass = 'uk-grid-' . $gridGap;
 <div class="mod-ourservices<?php echo $moduleclass_sfx; ?>">
     <?php if ($module->showtitle) : ?>
         <<?php echo $headerTag; ?><?php echo $headerClass ? ' class="' . $headerClass . '"' : ''; ?>>
-            <?php echo $module->title; ?>
+            <span><?php echo $module->title; ?></span>
         </<?php echo $headerTag; ?>>
     <?php endif; ?>
 
