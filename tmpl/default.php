@@ -33,7 +33,7 @@ $gapClass = 'uk-grid-' . $gridGap;
                 <div class="uk-cover-container uk-height-large">
                     <img src="<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>"
                         alt="<?php echo Text::_('MOD_OURSERVICES_SERVICES_IMAGE'); ?>"
-                        class="uk-border-circle">
+                        uk-cover>
                     <canvas width="600" height="600"></canvas>
                 </div>
             </div>
@@ -46,7 +46,7 @@ $gapClass = 'uk-grid-' . $gridGap;
                         <div class="uk-card uk-card-default">
                             <?php if (!empty($service->image)) : ?>
                             <div class="uk-card-media-top">
-                                <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" width="1800" height="1200" alt="">
+                                <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" class="uk-border-circle" width="1800" height="1200" alt="">
                             </div>
                             <?php endif; ?>
                             <div class="uk-card-body">
