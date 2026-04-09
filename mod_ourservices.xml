@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail></authorEmail>
     <authorUrl></authorUrl>
-    <version>1.0.5</version>
+    <version>2.0.0</version>
     <description>MOD_OURSERVICES_XML_DESCRIPTION</description>
 
     <namespace path="src">Joomla\Module\Ourservices</namespace>
@@ -36,6 +36,16 @@
                 />
 
                 <field
+                    name="intro_description"
+                    type="textarea"
+                    label="MOD_OURSERVICES_FIELD_DESCRIPTION_LABEL"
+                    description="MOD_OURSERVICES_FIELD_DESCRIPTION_DESC"
+                    rows="5"
+                    cols="30"
+                    filter="raw"
+                />
+
+                <field
                     name="services"
                     type="subform"
                     label="MOD_OURSERVICES_FIELD_SERVICES_LABEL"
@@ -53,6 +63,15 @@
                             required="true"
                             filter="string"
                         />
+
+                        <field
+                            name="image"
+                            type="media"
+                            label="MOD_OURSERVICES_FIELD_IMAGE_LABEL"
+                            description="MOD_OURSERVICES_FIELD_IMAGE_DESC"
+                            directory="images"
+                        />
+
                         <field
                             name="description"
                             type="textarea"
@@ -70,6 +89,13 @@
                         />
                     </form>
                 </field>
+
+                <field
+                    name="services_menuitem"
+                    type="menuitem"
+                    label="MOD_OURSERVICES_FIELD_MENUITEM_LABEL"
+                    description="MOD_OURSERVICES_FIELD_MENUITEM_DESC"
+                />
 
                 <field
                     name="columns"

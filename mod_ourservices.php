@@ -15,6 +15,8 @@ use Joomla\Module\Ourservices\Site\Helper\OurservicesHelper;
 // Get module parameters
 $services = $params->get('services', []);
 $image = $params->get('image', '');
+$intro_description = $params->get('intro_description', '');
+$services_menuitem = $params->get('services_menuitem', '');
 $columns = $params->get('columns', 3);
 $gridGap = $params->get('grid_gap', 'medium');
 $headerTag = $params->get('header_tag', 'h3');
