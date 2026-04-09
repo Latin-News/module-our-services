@@ -36,6 +36,9 @@ $gapClass = 'uk-grid-' . $gridGap;
                         uk-cover>
                     <canvas width="600" height="600"></canvas>
                 </div>
+                <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>);">
+                    <p class="uk-h4"><?php echo htmlspecialchars($intro_description, ENT_QUOTES, 'UTF-8'); ?></p>
+                </div>
             </div>
         <?php endif; ?>
 
@@ -45,9 +48,9 @@ $gapClass = 'uk-grid-' . $gridGap;
                     <div>
                         <div class="uk-card uk-card-default">
                             <?php if (!empty($service->image)) : ?>
-                            <div class="uk-card-media-top uk-text-center uk-padding uk-padding-remove-bottom">
-                                <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" class="uk-border-circle" width="120" height="120" alt="">
-                            </div>
+                                <div class="uk-card-media-top uk-text-center uk-padding uk-padding-remove-bottom">
+                                    <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" class="uk-border-circle" width="120" height="120" alt="">
+                                </div>
                             <?php endif; ?>
                             <div class="uk-card-body uk-padding-remove-top">
                                 <?php if (!empty($service->title)) : ?>
@@ -68,19 +71,19 @@ $gapClass = 'uk-grid-' . $gridGap;
                                     </div>
                                 <?php endif; ?>
 
-                                <?php if (!empty($servicesMenuItemLink)) : ?>
-                                    <p class="uk-margin-small-top">
-                                        <a href="<?php echo htmlspecialchars($servicesMenuItemLink, ENT_QUOTES, 'UTF-8'); ?>"
-                                            class="uk-button uk-button-text">
-                                            <?php echo Text::_('MOD_OURSERVICES_READ_MORE'); ?>
-                                        </a>
-                                    </p>
-                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php if (!empty($servicesMenuItemLink)) : ?>
+                <p class="uk-margin-small-top">
+                    <a href="<?php echo htmlspecialchars($servicesMenuItemLink, ENT_QUOTES, 'UTF-8'); ?>"
+                        class="uk-button uk-button-primary">
+                        <?php echo Text::_('MOD_OURSERVICES_FIELD_SERVICES'); ?>
+                    </a>
+                </p>
+            <?php endif; ?>
         </div>
     </div>
 </div>
