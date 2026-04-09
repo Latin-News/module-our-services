@@ -33,7 +33,7 @@ $gapClass = 'uk-grid-' . $gridGap;
                 <div class="uk-cover-container uk-height-large">
                     <img src="<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>"
                         alt="<?php echo Text::_('MOD_OURSERVICES_SERVICES_IMAGE'); ?>"
-                        uk-cover>
+                        class="uk-border-circle">
                     <canvas width="600" height="600"></canvas>
                 </div>
             </div>
