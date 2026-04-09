@@ -45,13 +45,13 @@ $gapClass = 'uk-grid-' . $gridGap;
                     <div>
                         <div class="uk-card uk-card-default">
                             <?php if (!empty($service->image)) : ?>
-                            <div class="uk-card-media-top">
-                                <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" class="uk-border-circle" width="1800" height="1200" alt="">
+                            <div class="uk-card-media-top uk-text-center uk-padding uk-padding-remove-bottom">
+                                <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" class="uk-border-circle" width="120" height="120" alt="">
                             </div>
                             <?php endif; ?>
-                            <div class="uk-card-body">
+                            <div class="uk-card-body uk-padding-remove-top">
                                 <?php if (!empty($service->title)) : ?>
-                                    <h3 class="uk-card-title">
+                                    <h3 class="uk-card-title uk-padding-remove-left uk-margin-remove-right uk-padding">
                                         <?php if (!empty($service->link)) : ?>
                                             <a href="<?php echo htmlspecialchars($service->link, ENT_QUOTES, 'UTF-8'); ?>">
                                                 <?php echo htmlspecialchars($service->title, ENT_QUOTES, 'UTF-8'); ?>
