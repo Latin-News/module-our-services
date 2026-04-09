@@ -30,14 +30,8 @@ $gapClass = 'uk-grid-' . $gridGap;
     <div class="<?php echo $gapClass; ?>" uk-grid>
         <?php if (!empty($processedImage)) : ?>
             <div class="uk-width-1-1">
-                <div class="uk-cover-container uk-height-large">
-                    <img src="<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>"
-                        alt="<?php echo Text::_('MOD_OURSERVICES_SERVICES_IMAGE'); ?>"
-                        uk-cover>
-                    <canvas width="600" height="600"></canvas>
-                </div>
                 <div class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url(<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>);">
-                    <p class="uk-h4"><?php echo htmlspecialchars($intro_description, ENT_QUOTES, 'UTF-8'); ?></p>
+                    <p class="uk-h2 uk-text-center uk-padding-large"><?php echo htmlspecialchars($intro_description, ENT_QUOTES, 'UTF-8'); ?></p>
                 </div>
             </div>
         <?php endif; ?>
