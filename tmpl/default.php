@@ -44,9 +44,11 @@ $gapClass = 'uk-grid-' . $gridGap;
                 <?php foreach ($processedServices as $service) : ?>
                     <div>
                         <div class="uk-card uk-card-default">
+                            <?php if (!empty($service->image)) : ?>
                             <div class="uk-card-media-top">
                                 <img src="<?php echo htmlspecialchars($service->image, ENT_QUOTES, 'UTF-8'); ?>" width="1800" height="1200" alt="">
                             </div>
+                            <?php endif; ?>
                             <div class="uk-card-body">
                                 <?php if (!empty($service->title)) : ?>
                                     <h3 class="uk-card-title">

@@ -51,6 +51,7 @@ class OurservicesHelper
             $item = new \stdClass();
             $item->title = $service->title;
             $item->description = $service->description ?? '';
+            $item->image = self::processImage($service->image ?? '');
 
             // Process menu item link
             if (!empty($service->menuitem)) {
@@ -76,6 +77,18 @@ class OurservicesHelper
      */
     public static function processImage($imagePath)
     {
+        if (empty($imagePath)) {
+            return '';
+        }
+
+        // Joomla 5 media fields in subforms store a JSON object — extract imagefile
+        if (is_string($imagePath) && str_starts_with(ltrim($imagePath), '{')) {
+            $decoded = json_decode($imagePath);
+            $imagePath = $decoded->imagefile ?? '';
+        } elseif (is_object($imagePath)) {
+            $imagePath = $imagePath->imagefile ?? '';
+        }
+
         if (empty($imagePath)) {
             return '';
         }
