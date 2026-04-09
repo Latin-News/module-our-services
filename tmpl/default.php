@@ -52,8 +52,8 @@ $gapClass = 'uk-grid-' . $gridGap;
                             <div class="uk-card-body uk-padding-remove-top">
                                 <?php if (!empty($service->title)) : ?>
                                     <h3 class="uk-card-title uk-padding-remove-left uk-margin-remove-right uk-padding">
-                                        <?php if (!empty($service->link)) : ?>
-                                            <a href="<?php echo htmlspecialchars($service->link, ENT_QUOTES, 'UTF-8'); ?>">
+                                        <?php if (!empty($servicesMenuItemLink)) : ?>
+                                            <a href="<?php echo htmlspecialchars($servicesMenuItemLink, ENT_QUOTES, 'UTF-8'); ?>">
                                                 <?php echo htmlspecialchars($service->title, ENT_QUOTES, 'UTF-8'); ?>
                                             </a>
                                         <?php else : ?>
@@ -68,9 +68,9 @@ $gapClass = 'uk-grid-' . $gridGap;
                                     </div>
                                 <?php endif; ?>
 
-                                <?php if (!empty($service->link)) : ?>
+                                <?php if (!empty($servicesMenuItemLink)) : ?>
                                     <p class="uk-margin-small-top">
-                                        <a href="<?php echo htmlspecialchars($service->link, ENT_QUOTES, 'UTF-8'); ?>"
+                                        <a href="<?php echo htmlspecialchars($servicesMenuItemLink, ENT_QUOTES, 'UTF-8'); ?>"
                                             class="uk-button uk-button-text">
                                             <?php echo Text::_('MOD_OURSERVICES_READ_MORE'); ?>
                                         </a>

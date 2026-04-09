@@ -53,13 +53,6 @@ class OurservicesHelper
             $item->description = $service->description ?? '';
             $item->image = self::processImage($service->image ?? '');
 
-            // Process menu item link
-            if (!empty($service->menuitem)) {
-                $item->link = self::getMenuItemLink($service->menuitem);
-            } else {
-                $item->link = '';
-            }
-
             $processedServices[] = $item;
         }
 
@@ -114,7 +107,7 @@ class OurservicesHelper
      *
      * @since   1.0.0
      */
-    protected static function getMenuItemLink($menuItemId)
+    public static function getMenuItemLink($menuItemId)
     {
         if (empty($menuItemId)) {
             return '';

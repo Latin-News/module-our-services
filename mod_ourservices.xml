@@ -7,7 +7,7 @@
     <license>GNU General Public License version 2 or later</license>
     <authorEmail></authorEmail>
     <authorUrl></authorUrl>
-    <version>2.0.3</version>
+    <version>2.0.4</version>
     <description>MOD_OURSERVICES_XML_DESCRIPTION</description>
 
     <namespace path="src">Joomla\Module\Ourservices</namespace>
@@ -80,12 +80,6 @@
                             rows="5"
                             cols="30"
                             filter="raw"
-                        />
-                        <field
-                            name="menuitem"
-                            type="menuitem"
-                            label="MOD_OURSERVICES_FIELD_MENUITEM_LABEL"
-                            description="MOD_OURSERVICES_FIELD_MENUITEM_DESC"
                         />
                     </form>
                 </field>

@@ -26,6 +26,7 @@ $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_COM
 // Process services data and image
 $processedServices = OurservicesHelper::getServices($services);
 $processedImage = OurservicesHelper::processImage($image);
+$servicesMenuItemLink = OurservicesHelper::getMenuItemLink($services_menuitem);
 
 // Require the template
 require ModuleHelper::getLayoutPath('mod_ourservices', $params->get('layout', 'default'));
