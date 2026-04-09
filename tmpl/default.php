@@ -27,9 +27,9 @@ $gapClass = 'uk-grid-' . $gridGap;
         </<?php echo $headerTag; ?>>
     <?php endif; ?>
 
-    <div class="uk-grid uk-child-width-1-2@m uk-child-width-1-1 <?php echo $gapClass; ?>" uk-grid>
+    <div class="<?php echo $gapClass; ?>" uk-grid>
         <?php if (!empty($processedImage)) : ?>
-            <div class="uk-flex-first">
+            <div class="uk-width-1-1">
                 <div class="uk-cover-container uk-height-large">
                     <img src="<?php echo htmlspecialchars($processedImage, ENT_QUOTES, 'UTF-8'); ?>"
                         alt="<?php echo Text::_('MOD_OURSERVICES_SERVICES_IMAGE'); ?>"
@@ -39,8 +39,8 @@ $gapClass = 'uk-grid-' . $gridGap;
             </div>
         <?php endif; ?>
 
-        <div>
-            <div class="uk-grid-small uk-child-width-1-1" uk-grid>
+        <div class="uk-width-1-1">
+            <div class="uk-grid-small uk-child-width-1-<?php echo $columns; ?>" uk-grid>
                 <?php foreach ($processedServices as $service) : ?>
                     <div>
                         <div class="uk-card uk-card-default">
